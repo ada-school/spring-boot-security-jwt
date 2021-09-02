@@ -639,8 +639,8 @@ class SecurityConfiguration : WebSecurityConfigurerAdapter() {
    same that you have locally using a new environment variable. If the secret match then you will generate a token that
    will allow the server to have *ADMIN* role token for 10 minutes.
 
-***Tip***: Divide this problem into smaller problems. Once you solve each problem test your solution and only continue
-if it works.
+   ***Tip***: Divide this problem into smaller problems. Once you solve each problem test your solution and only continue
+   if it works.
 
     
 
