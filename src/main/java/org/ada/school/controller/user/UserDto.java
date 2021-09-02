@@ -8,6 +8,8 @@ public class UserDto
 
     String email;
 
+    String password;
+
     public UserDto()
     {
     }
@@ -25,5 +27,10 @@ public class UserDto
     public String getEmail()
     {
         return email;
+    }
+
+    public String getPassword()
+    {
+        return password;
     }
 }
