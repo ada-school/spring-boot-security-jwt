@@ -11,9 +11,9 @@ Secure your REST API using Spring Security with JWT.
 - Implement the security of the API endpoints using JWT
 
 
-## Detail Orientation 🤹🏽
+## Problem Solving 🤹🏽
 
-Read the following document [Attention to details](https://www.csu.edu/humanresources/empdev/documents/AttentiontoDetail.pdf) 
+Our API Endpoints can be used by anyone that knows the URL and API structure. In order to secure our API we are going to implement JWT authentication. But let's practice our problem solving skills first the [Bridge Riddle](https://ed.ted.com/lessons/can-you-solve-the-bridge-riddle-alex-gendler#watch) 
 
 **Main Topics**
 
