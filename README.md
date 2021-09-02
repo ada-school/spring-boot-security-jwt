@@ -17,9 +17,9 @@ Read the following document [Attention to details](https://www.csu.edu/humanreso
 
 **Main Topics**
 
-* NoSQL.
-* MongoDB.
-* Cluster.
+* Spring Security.
+* JWT.
+* Token.
 
 
 
