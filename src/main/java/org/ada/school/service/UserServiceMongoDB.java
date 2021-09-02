@@ -1,6 +1,6 @@
 package org.ada.school.service;
 
-import org.ada.school.controller.UserDto;
+import org.ada.school.controller.user.UserDto;
 import org.ada.school.exception.UserNotFoundException;
 import org.ada.school.repository.UserRepository;
 import org.ada.school.repository.document.User;
@@ -32,6 +32,21 @@ public class UserServiceMongoDB
     public User findById( String id )
     {
         Optional<User> optionalUser = userRepository.findById( id );
+        if ( optionalUser.isPresent() )
+        {
+            return optionalUser.get();
+        }
+        else
+        {
+            throw new UserNotFoundException();
+        }
+    }
+
+    @Override
+    public User findByEmail( String email )
+        throws UserNotFoundException
+    {
+        Optional<User> optionalUser = userRepository.findByEmail( email );
         if ( optionalUser.isPresent() )
         {
             return optionalUser.get();

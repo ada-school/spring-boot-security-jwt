@@ -1,4 +1,4 @@
-package org.ada.school.controller;
+package org.ada.school.controller.health;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

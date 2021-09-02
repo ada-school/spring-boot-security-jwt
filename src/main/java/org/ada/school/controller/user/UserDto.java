@@ -1,4 +1,4 @@
-package org.ada.school.controller;
+package org.ada.school.controller.user;
 
 public class UserDto
 {

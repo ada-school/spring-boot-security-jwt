@@ -1,4 +1,4 @@
-package org.ada.school.controller;
+package org.ada.school.controller.user;
 
 import org.ada.school.repository.document.User;
 import org.ada.school.service.UserService;
