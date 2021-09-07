@@ -6,4 +6,6 @@ public class Constants {
 
     public static  int TOKEN_DURATION_MINUTES = 1000;
 
+    public static  String COOKIE_NAME = "api-cookie";
+
 }

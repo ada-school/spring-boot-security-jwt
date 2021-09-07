@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "d41c2339-dc59-4527-8da3-1b43f8c33cab",
+		"name": "ieti-lab02-spring-security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/v1/user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Eduard\",\n    \"email\": \"eduard@mail.com\",\n    \"lastName\": \"Arias\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user"
+					]
+				},
+				"description": "Save new user"
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/user/all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTM2ZTZmYWZkMjZiMjNiNjZkNmNhYjYiLCJVU0VSIjpbIlVTRVIiXSwiaWF0IjoxNjMwOTg5MDY2LCJleHAiOjE2MzEwNDkwNjZ9.vvI8f789EZlCrm9wi2Vy01qlB0znsoozhVzwSu08Mvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user"
+					]
+				},
+				"description": "Get all users"
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/user/{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTM2ZTZmYWZkMjZiMjNiNjZkNmNhYjYiLCJVU0VSIjpbIlVTRVIiXSwiaWF0IjoxNjMwOTg5MDY2LCJleHAiOjE2MzEwNDkwNjZ9.vvI8f789EZlCrm9wi2Vy01qlB0znsoozhVzwSu08Mvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/user/6136e6fafd26b23b66d6cab6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user",
+						"6136e6fafd26b23b66d6cab6"
+					]
+				},
+				"description": "Get user by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/user/{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTM2ZTZmYWZkMjZiMjNiNjZkNmNhYjYiLCJVU0VSIjpbIlVTRVIiXSwiaWF0IjoxNjMwOTg5MDY2LCJleHAiOjE2MzEwNDkwNjZ9.vvI8f789EZlCrm9wi2Vy01qlB0znsoozhVzwSu08Mvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Eduard\",\n    \"email\": \"eduard@gmail.com\",\n    \"lastName\": \"Arias\",\n    \"password\":\"password1998\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/user/6136e6fafd26b23b66d6cab6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user",
+						"6136e6fafd26b23b66d6cab6"
+					]
+				},
+				"description": "Update user info by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/user/{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTM2ZTZmYWZkMjZiMjNiNjZkNmNhYjYiLCJVU0VSIjpbIlVTRVIiXSwiaWF0IjoxNjMwOTg5MDY2LCJleHAiOjE2MzEwNDkwNjZ9.vvI8f789EZlCrm9wi2Vy01qlB0znsoozhVzwSu08Mvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/user/6136e6fafd26b23b66d6cab6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user",
+						"6136e6fafd26b23b66d6cab6"
+					]
+				},
+				"description": "Delete user by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"eduard@mail.com\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"auth"
+					]
+				},
+				"description": "Login to the system"
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"health"
+					]
+				},
+				"description": "Check if API Server is working "
+			},
+			"response": []
+		}
+	]
+}
