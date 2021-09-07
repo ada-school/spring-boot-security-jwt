@@ -26,6 +26,13 @@ dependencies {
   compileOnly 'org.projectlombok:lombok:1.18.20'
   annotationProcessor 'org.projectlombok:lombok:1.18.20'
 
+  // https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
+  implementation 'javax.xml.bind:jaxb-api:2.3.1'
+
+
+  // https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime
+  implementation 'org.glassfish.jaxb:jaxb-runtime:3.0.2'
+
 }
 
 test {
