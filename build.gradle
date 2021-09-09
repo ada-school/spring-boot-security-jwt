@@ -18,6 +18,12 @@ dependencies {
   testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-starter-security'
+  implementation 'org.springframework.security:spring-security-crypto'
+  implementation 'io.jsonwebtoken:jjwt:0.9.1'
+}
+
 test {
   useJUnitPlatform()
 }
