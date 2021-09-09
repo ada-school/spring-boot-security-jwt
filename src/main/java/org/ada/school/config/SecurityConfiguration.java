@@ -9,14 +9,12 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 
 @EnableWebSecurity
 @EnableGlobalMethodSecurity( securedEnabled = true, jsr250Enabled = true, prePostEnabled = true )
-public class SecurityConfiguration
-        extends WebSecurityConfigurerAdapter
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter
 {
 
 
     @Override
-    protected void configure( HttpSecurity http )
-            throws Exception
+    protected void configure( HttpSecurity http ) throws Exception
     {
         http.cors().and().csrf().disable()
                 .authorizeRequests()
