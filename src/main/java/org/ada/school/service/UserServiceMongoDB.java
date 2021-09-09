@@ -5,12 +5,13 @@ import org.ada.school.exception.UserNotFoundException;
 import org.ada.school.repository.UserRepository;
 import org.ada.school.repository.document.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
+@Component
 public class UserServiceMongoDB
     implements UserService
 {
