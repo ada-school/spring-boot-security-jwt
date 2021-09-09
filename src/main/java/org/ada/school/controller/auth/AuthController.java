@@ -1,5 +1,6 @@
 package org.ada.school.controller.auth;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.ada.school.exception.InvalidCredentialsException;
@@ -47,6 +48,11 @@ public class AuthController
             throw new InvalidCredentialsException();
         }
 
+    }
+
+    @PostMapping(value="/sudo")
+    public TokenDto sudo(@RequestBody JsonNode secret) {
+        return new TokenDto("Trying get access as ADMIN", new Date());
     }
 
     private String generateToken( User user, Date expirationDate )
