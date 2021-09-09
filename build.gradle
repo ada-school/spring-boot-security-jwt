@@ -15,7 +15,24 @@ repositories {
 dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-web'
   implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+  implementation 'org.springframework.boot:spring-boot-starter-security'
+  implementation 'org.springframework.boot:spring-boot-starter-security'
   testImplementation 'org.springframework.boot:spring-boot-starter-test'
+  implementation 'org.springframework.boot:spring-boot-starter-security'
+  implementation 'org.springframework.security:spring-security-crypto'
+  implementation 'io.jsonwebtoken:jjwt:0.9.1'
+
+  // https://mvnrepository.com/artifact/org.projectlombok/lombok
+  compileOnly 'org.projectlombok:lombok:1.18.20'
+  annotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+  // https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
+  implementation 'javax.xml.bind:jaxb-api:2.3.1'
+
+
+  // https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime
+  implementation 'org.glassfish.jaxb:jaxb-runtime:3.0.2'
+
 }
 
 test {

@@ -1,5 +1,10 @@
 package org.ada.school.controller.user;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor
 public class UserDto
 {
     String name;
@@ -10,27 +15,4 @@ public class UserDto
 
     String password;
 
-    public UserDto()
-    {
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-
-    public String getLastName()
-    {
-        return lastName;
-    }
-
-    public String getEmail()
-    {
-        return email;
-    }
-
-    public String getPassword()
-    {
-        return password;
-    }
 }
