@@ -2,8 +2,6 @@ package org.ada.school.controller.auth;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import org.ada.school.auth.LoginDto;
-import org.ada.school.auth.TokenDto;
 import org.ada.school.exception.InvalidCredentialsException;
 import org.ada.school.repository.document.User;
 import org.ada.school.service.UserService;
@@ -37,10 +35,10 @@ public class AuthController
     }
 
     @PostMapping
-    public TokenDto login(@RequestBody LoginDto loginDto )
+    public TokenDto login( @RequestBody LoginDto loginDto )
     {
-        User user = userService.findByEmail( loginDto.getEmail());
-        if ( BCrypt.checkpw( loginDto.getPassword(), user.getPasswordHash() ) )
+        User user = userService.findByEmail( loginDto.email );
+        if ( BCrypt.checkpw( loginDto.password, user.getPasswordHash() ) )
         {
             return generateTokenDto( user );
         }

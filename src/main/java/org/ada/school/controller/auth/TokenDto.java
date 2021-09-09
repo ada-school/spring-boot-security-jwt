@@ -1,4 +1,4 @@
-package org.ada.school.auth;
+package org.ada.school.controller.auth;
 
 import java.util.Date;
 
