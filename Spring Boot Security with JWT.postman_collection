@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "c02c707a-9f2a-4dd3-a97d-13488830c192",
+		"name": "Spring Boot Security with JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Paula Andrea\", \r\n    \"lastName\":\"Guevara\", \r\n    \"email\":\"paula.guevara-s@mail.escuelaing.edu.co\", \r\n    \"password\":\"123456\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postauth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"paula.guevara-s@mail.escuelaing.edu.co\", \r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserToken",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTNhNjU2YjQzMTJjYTJmYjY5NDk5ZTIiLCJSb2xlcy1KV1QiOlsiVVNFUiJdLCJpYXQiOjE2MzEyMTcwMTgsImV4cCI6MTYzMTIxNzI1OH0.1oH62vrRvxWGwNqjXTbQcpgBiKsbJfAmxtImfbXw4Q4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
